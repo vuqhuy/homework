@@ -168,39 +168,48 @@ const getStudentProfile = () => {
 //     theBad: { id: 2, name: 'Phạm Văn Bưởi', score: 2.3 }
 // }
 const checkRank = () => {
-        const students = [
-            { id: 1, name: 'Nguyễn Thị Tèo', score: 9.2 },
-            { id: 2, name: 'Phạm Văn Bưởi', score: 2.3 },
-            { id: 3, name: 'Hoàng Văn Nam', score: 3.7 },
-            { id: 4, name: 'Vũ Ngọc Duy', score: 6.9 },
-            { id: 5, name: 'Nguyễn Minh Nhật', score: 5.2 },
-            { id: 6, name: 'Phí Duy Quân', score: 9.6 },
-            { id: 7, name: 'Trần Minh Minh', score: 6.1 }
-        ]
-        let index_max = 0
-        let index_min = 0
-        let result = []
+    const students = [
+        { id: 1, name: 'Nguyễn Thị Tèo', score: 9.2 },
+        { id: 2, name: 'Phạm Văn Bưởi', score: 2.3 },
+        { id: 3, name: 'Hoàng Văn Nam', score: 3.7 },
+        { id: 4, name: 'Vũ Ngọc Duy', score: 6.9 },
+        { id: 5, name: 'Nguyễn Minh Nhật', score: 5.2 },
+        { id: 6, name: 'Phí Duy Quân', score: 9.6 },
+        { id: 7, name: 'Trần Minh Minh', score: 6.1 }
+    ]
+    let max = 0
+    let min = 10
+    let result = []
 
-        for (let i = 0; i < students.length; i++) {
-            let max = 0
-            if (students[i].score > max) {
-                max = students[i].score
-            }
-            index_max = i
+    students.forEach(student => {
+
+        if (student.score > max) {
+            max = student.score;
         }
-        result.push({ theBest: students[index_max] })
+    })
+    console.log(max)
 
-        for (let i = 0; i < students.length; i++) {
-            let min = 0
-            if (students[i].score < min) {
-                min = students[i].score
 
-            }
-            index_min = i
+    students.forEach(student => {
+
+        if (student.score < min) {
+            min = student.score;
         }
-        result.push({ theBad: students[index_min] })
+    })
+    console.log(min)
 
-        console.log('result', result)
+    let temp
+
+    for (let i = 0; i < students.length; i++) {
+        if (students[i].score == max) {
+            temp = students[i]
+            result.push({ theBest: temp })
+        }
+
+        if (students[i].score == min) {
+            temp = students[i]
+            result.push({...result, theBad: temp })
+        }
     }
-    // gặp vấn đề khi không thể đưa ra giá trị max
-    // k đưa ra kết quả dù thuật toán tìm max đúng
+    console.log('result', result)
+}
