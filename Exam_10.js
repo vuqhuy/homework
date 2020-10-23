@@ -203,3 +203,4 @@ const checkRank = () => {
         console.log('result', result)
     }
     // gặp vấn đề khi không thể đưa ra giá trị max
+    // k đưa ra kết quả dù thuật toán tìm max đúng
