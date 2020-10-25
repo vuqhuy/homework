@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img">
+            <div class="img-header">
+                <span class="dot dot-1">
+                    <img src="/images/foot_dog.png" alt="foot-dog" height="20px" width="20px">
+                </span>
+                <p>PUPASSURE</p>
+            </div>
+            <div class="img-anh"><img src="./image/dog.png" width="210px" height="210px"></div>
+        </div>
+        <div class="content">
+            <h1>Yay, puppies! Ensure your pup gets the best care!</h1>
+            <div class="content-1">
+                <div class="content-name">
+                    <p>Name</p>
+                    <input type="text" placeholder="Pet's name">
+                </div>
+                <div class="content-anh">
+                    <p>&nbsp;</p>
+                    <input type="file">
+                </div>
+            </div>
+            <div class="content-2">
+                <div class="content-breed">
+                    <p>Breed</p>
+                    <input type="text" placeholder="Pet's breed">
+                </div>
+                <div class="content-anh">
+                    <p>Birthday</p>
+                    <input type="date">
+                </div>
+            </div>
+            <div class="content-3">
+                <div class="gender">
+                    <P>Gender</P><br>
+                    <div class="content-3-gender">
+                        <input type="radio" checked id="content-3-female" name="gt" value="Female">
+                        <label for="content-3-female">Female</label>
+                        <input type="radio" id="content-3-male" name="gt" value="Male">
+                        <label for="content-3-male">Male</label>
+                    </div>
+                </div>
+                <div class="spayedor">
+                    <P>Spayed or Neutered</P><br>
+                    <div class="content-3-spayedor">
+                        <input type="radio" checked id="content-3-spayed" name="sn" value="Spayed">
+                        <label for="content-3-spayed">Spayed</label>
+                        <input type="radio" id="content-3-neutered" name="sn" value="Neutered">
+                        <label for="content-3-neutered">Neutered</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="content-4">
+                <P>Weigh</P><br>
+                <div class="content-4-weigh">
+                    <input type="radio" checked id="weigh-0-25" name="weigh" value="0-25">
+                    <label for="weigh-0-25">0-25 lbs</label>
+                    <input type="radio" id="weigh-25-50" name="weigh" value="25-50">
+                    <label for="weigh-25-50">25-50 lbs</label>
+                    <input type="radio" checked id="weigh-50-100" name="weigh" value="50-100">
+                    <label for="weigh-50-100">50-100 lbs</label>
+                    <input type="radio" id="weigh-100" name="weigh" value="100+">
+                    <label for="weigh-100">100+ lbs</label>
+                </div>
+            </div>
+            <div class="content-5">
+                <div class="content-back">
+                    <input type="reset" value="Back" name="reset">
+                </div>
+                <div class="content-next">
+                    <input type="button" value="Next" name="button">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

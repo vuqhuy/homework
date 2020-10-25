@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #F1F1F1;
+    font-family: cursive;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.album {
+    width: 80%;
+    margin: 100px auto;
+}
+
+.background {
+    opacity: 50%;
+}
+
+.background:hover {
+    opacity: 100%;
+}
+
+.container {
+    position: relative;
+    margin-left: 30%;
+}
+
+div[class^="box-"] {
+    position: absolute;
+    background: white;
+}
+
+div[class^="box-"]:hover {
+    z-index: 5;
+    transform: scale(1.2);
+    top: 200px;
+    left: 200px;
+}
+
+.container .link-img {
+    background: white;
+    padding: 10px;
+    box-shadow: 2px 2px 6px gray;
+    height: 260px;
+    width: 200px;
+    display: block;
+}
+
+.container .link-img:hover {
+    background: bl;
+}
+
+.container .link-img .card-img {
+    overflow: hidden;
+    position: relative;
+    height: 85%;
+    width: 100%;
+    margin-bottom: 16px;
+    box-shadow: inset 10px 10px 10px black;
+}
+
+.container .link-img .anh-1 {
+    max-height: 100%;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: -100%;
+    bottom: -100%;
+}
+
+.container .link-img .text {
+    font-size: 14px;
+    color: black;
+}
+
+
+/* transform: rotate */
+
+.box-image1 {
+    transform: rotate(0deg);
+    top: 10px;
+    left: 170px;
+}
+
+.box-image2 {
+    transform: rotate(-5deg);
+    top: 330px;
+    left: 300px;
+}
+
+.box-image3 {
+    transform: rotate(-5deg);
+    top: 170px;
+    left: 100px;
+}
+
+.box-image4 {
+    transform: rotate(7deg);
+    top: 100px;
+    left: 300px;
+}
