@@ -23,6 +23,7 @@ const repeatingCharacters_2 = (a = '', n) => {
   }
   return result
 }
+
 //Bài 2
 // Viết 1 hàm để đảo ngược 1 mảng, không được dùng hàm array.reverse()
 // Vd input:
