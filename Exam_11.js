@@ -30,7 +30,6 @@ const repeatingCharacters_2 = (a = '', n) => {
 // ['a', 1, '9', 'apple']
 // Thì output phải là:
 // ['apple', '9', 1, 'a']
-
 const reverseTheArray = (input = []) => {
   const result = []
   for (let i = input.length - 1; i >= 0; i--) {
@@ -45,7 +44,6 @@ const reverseTheArray = (input = []) => {
 // [0, 1, false, 2, undefined, '', 3, null]
 // Thì output là:
 // [1, 2, 3]
-
 const deleteFalsesValues = (input = []) => {
   const result = input.filter(character => character !== undefined && character !== null && character !== false && character !== '')
   return result
@@ -57,7 +55,6 @@ const deleteFalsesValues = (input = []) => {
 // const data = [['a', 1], ['b', 2]]
 // Thì output là:
 // { a: 1, b: 2 }
-
 const convertArray = (data = []) => {
   const result = {}
   data.forEach(item => {
@@ -72,7 +69,6 @@ const convertArray = (data = []) => {
 // [6, 4, 0, 3, -2, 1]
 // Thì output là:
 // [-2, 0, 1, 3, 4, 6]
-
 const sortTheArray = (input = []) => {
   for (let i = 0; i < input.length - 1; i++) {
     for (let j = i + 1; j < input.length; j++) {
@@ -93,7 +89,6 @@ const sortTheArray = (input = []) => {
 // return true
 // const data = [1, 2, 3]
 // return false
-
 const checkinput = (input) => {
   if (typeof input === 'object') return true
   if (array.isArray(input) === true) return false
@@ -104,7 +99,6 @@ const checkinput = (input) => {
 // const obj = { a: 1, b: 2, c: 3, d: 4 }
 // // truyền vào a, c
 // return { b: 2, d: 4 }
-
 const convertObject = (object = {}, input = []) => {
   for (let key in object) {
     input.forEach(inputKey => {
@@ -118,7 +112,6 @@ const convertObject = (object = {}, input = []) => {
 
 // Bài 8
 // Viết hàm nhập vào 1 array có nhiều hơn 5 phần tử Xóa phần tử số 2, 3 trong array Return mảng sau khi đã xóa
-
 const deleteArrayItem = (input = []) => {
   if (input.length < 5) return 'mảng < 5 phần tử => nhập lại mảng'
   input.splice(1, 2)
@@ -140,7 +133,6 @@ const deleteArrayItem = (input = []) => {
 // ['Pass', 'Fail', 'Fail', 'Pass', 'Pass', 'Fail', 'Pass']
 // Điều kiện Pass:
 // Điểm trên 5.0 và không có chữ Duy là tên đệm
-
 const students = [
   { id: 1, name: 'Nguyễn Thị Tèo', score: 9.2 },
   { id: 2, name: 'Phạm Văn Bưởi', score: 2.3 },
@@ -166,7 +158,6 @@ const checkResult = (students = []) => {
 // Hãy tìm các students có điểm là số mà tổng số nút của phần trước dấu thập phân và phần sau dấu thập phân cộng lại lớn hơn 5
 // Vd: 6.9 -> 6 + 9 = 5 (không lấy)
 // 3.7 -> 3 + 7 = 0 (không lấy) 5.2 -> 5 + 2 = 7 (lấy)
-
 const findStudent = (students = []) => {
   const result = []
   students.forEach(student => {
