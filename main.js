@@ -131,16 +131,17 @@ const profit = (p) => {
     // •	400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
     // •	200 đồng cho bất kỳ phút gọi nào sau 200 phút đầu tiên.
 const telephoneCharges = (tC) => {
-    let minute
-    let feeRequired = 25000
-    if (minute <= 50) {
-        tC = minute * 600 + feeRequired
+        let minute
+        let feeRequired = 25000
+        if (minute <= 50) {
+            tC = minute * 600 + feeRequired
+        }
+        if (minute > 50 && minute <= 200) {
+            tC = 50 * 600 + (minute - 50) * 400
+        }
+        if (minute > 200) {
+            tC = 50 * 600 + 150 * 400 + (minute - 200) * 200
+        }
+        return `cuoc dien thoai :(${tC})`
     }
-    if (minute > 50 && minute <= 200) {
-        tC = 50 * 600 + (minute - 50) * 400
-    }
-    if (minute > 200) {
-        tC = 50 * 600 + 150 * 400 + (minute - 200) * 200
-    }
-    return `cuoc dien thoai :(${tC})`
-}
+    // ácbkajsch
