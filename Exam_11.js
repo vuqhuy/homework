@@ -100,14 +100,15 @@ const checkinput = (input) => {
 // // truyền vào a, c
 // return { b: 2, d: 4 }
 const convertObject = (object = {}, input = []) => {
-  for (let key in object) {
-    input.forEach(inputKey => {
-      if (key === inputKey) {
-        delete(object[key])
+  const result = {...object}
+  for(let key in result) {
+    if(result.hasOwnProperty(key)) {
+      if(input.includes(key)) {
+        delete result[key]
       }
-    })
+    }
   }
-  return object
+  return result
 }
 
 // Bài 8
@@ -135,7 +136,7 @@ const deleteArrayItem = (input = []) => {
 // Điểm trên 5.0 và không có chữ Duy là tên đệm
 const students = [
   { id: 1, name: 'Nguyễn Thị Tèo', score: 9.2 },
-  { id: 2, name: 'Phạm Văn Bưởi', score: 2.3 },
+  { id: 2, name: 'Phạm Văn     Bưởi', score: 2.3 },
   { id: 3, name: 'Hoàng Văn Nam', score: 3.7 },
   { id: 4, name: 'Vũ Ngọc Duy', score: 6.9 },
   { id: 5, name: 'Nguyễn Minh Nhật', score: 5.2 },
@@ -145,8 +146,11 @@ const students = [
 const checkResult = (students = []) => {
   const result = []
   students.forEach(student => {
-    let splitName = student.name.split(" ")
-    if (student.score < 5.0 || splitName[1] === 'Duy') {
+    r=/[]{2,}/g
+    student.name.replace(r, ' ')
+    let splitName = student.name.trim().split(" ")
+    console.log(splitName)
+    if (student.score < 5.0 || splitName[0] === 'Duy') {
       result.push('Fail')
     } else result.push('Pass')
   })
