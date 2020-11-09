@@ -1,0 +1,17 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+ul li {
+    list-style: none;
+}
+.general {
+    display: none;
+}
+.child {
+    display: none;
+}
+.active {
+    display: block;
+}
